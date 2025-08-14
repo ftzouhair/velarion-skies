@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VELARION Skies — Premium Private Jet Charters</title>
+  <meta name="description" content="VELARION Skies offers luxury private jet charters, helicopter transfers and medical aviation services worldwide." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="canonical" href="https://velarion-skies.com/">
+  <meta property="og:title" content="VELARION Skies — Premium Private Jet Charters">
+  <meta property="og:description" content="Luxury, discretion & safety — bespoke private jet charters worldwide.">
+  <meta property="og:image" content="https://velarion-skies.com/assets/images/og-image.jpg">
+  <meta property="og:url" content="https://velarion-skies.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "VELARION Skies",
+      "url": "https://velarion-skies.com",
+      "logo": "https://velarion-skies.com/assets/images/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-800-835-2746",
+        "contactType": "customer service",
+        "areaServed": "Worldwide",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://www.facebook.com/velarionskies",
+        "https://twitter.com/velarionskies",
+        "https://www.instagram.com/velarionskies",
+        "https://www.linkedin.com/company/velarionskies"
+      ]
+    }
+  </script>
+  <style>
+    :root {
+      --bg: #f7f7f7;
+      --card: #ffffff;
+      --text: #0f1720;
+      --muted: #55606a;
+      --accent: #071f33;
+      --gold: #c8a46b;
+      --radius: 14px;
+      --container: 1200px;
+      --ease: 220ms;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+    a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      background: white;
+      border-bottom: 1px solid #eee;
+      padding: 14px 0;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      height: 70px;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--accent);
+    }
+    nav ul {
+      display: flex;
+      gap: 10px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      padding: 8px 10px;
+      color: var(--text);
+    }
+    nav a:hover {
+      background: #f0f0f0;
+    }
+    .mobile-menu {
+      display: none;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    .mobile-menu:hover {
+      background: rgba(7,31,51,0.05);
+    }
+    .mobile-menu i {
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+    .hero {
+      padding: 120px 0 80px;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--bg) 100%);
+      color: var(--card);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-content h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #ffffff 0%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: none;
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      color: rgba(255, 255, 255, 0.9);
+    }
+    .hero-scroll-indicator {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      animation: bounce 2s infinite;
+    }
+    .hero-scroll-indicator span {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      opacity: 0.7;
+    }
+    .hero-scroll-indicator i {
+      font-size: 24px;
+      color: var(--gold);
+    }
+    h1 {
+      font-size: 36px;
+      color: var(--accent);
+      margin: 20px 0;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: var(--accent);
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      margin: 5px;
+      transition: all var(--ease);
+    }
+    .btn:hover {
+      background: #051522;
+    }
+    .btn--outline {
+      border: 1px solid var(--accent);
+      background: transparent;
+      color: var(--accent);
+    }
+    .btn--outline:hover {
+      background: rgba(7,31,51,0.1);
+    }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+      }
+      40% {
+        transform: translateX(-50%) translateY(-10px);
+      }
+      60% {
+        transform: translateX(-50%) translateY(-5px);
+      }
+    }
+    :focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 2px;
+    }
+    /* Responsive */
+    @media (max-width: 1440px) {}
+    @media (max-width: 1200px) {}
+    @media (max-width: 1024px) {}
+    @media (max-width: 768px) {
+      .mobile-menu { display: block; }
+      .nav-links { display: none; position: fixed; top: 70px; right: 0; width: 250px; background: white; box-shadow: -5px 0 15px rgba(0,0,0,0.1); border-radius: 10px 0 0 10px; z-index: 100; padding: 20px; flex-direction: column; }
+      .nav-links.active { display: flex; }
+      .nav-links li { margin-bottom: 10px; width: 100%; }
+      .nav-links a { display: block; padding: 12px; border-radius: 5px; text-align: left; }
+      .nav-links a:hover { background: rgba(7,31,51,0.05); }
+      .nav { flex-direction: row; justify-content: space-between; align-items: center; }
+      .hero-content h1 { font-size: 2.5rem; }
+      .hero-content p { font-size: 1rem; }
+    }
+    @media (max-width: 480px) {}
+  </style>
+  <link rel="stylesheet" href="assets/css/style.css" media="print" onload="this.media='all'">
+</head>
+<body class="page-home">
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="logo" href="#">VELARION <span class="text-gold">Skies</span></a>
+        <nav>
+          <ul id="mainNav" class="nav-links">
+            <li><a href="#" aria-current="page">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Book Flight</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Legal</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="mobile-menu" aria-label="Toggle menu" aria-controls="mainNav" aria-expanded="false"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <div class="container">
+      <!-- Hero section -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1>A Better Way to Fly Private</h1>
+            <p>VELARION Skies proudly raises the bar and exceeds the standard for luxury and corporate private jet charter services.</p>
+            <div>
+              <a href="#" class="btn">Request a Flight</a>
+              <a href="#" class="btn btn--outline">Learn More</a>
+            </div>
+            <p class="subcopy">No membership. No hidden fees. 15-minute response. 24/7 concierge.</p>
+          </div>
+        </div>
+        <div class="hero-scroll-indicator">
+          <span>Scroll to Explore</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </section>
+
+      <!-- About section -->
+      <section class="about">
+        <div class="section-icon"><i class="fas fa-gem"></i></div>
+        <div class="container">
+          <div class="about-content">
+            <div class="about-image">
+              <img src="assets/images/placeholders/about-main.svg" alt="Spacious and luxurious interior of a private jet." class="main-img" width="600" height="400" loading="lazy">
+              <img src="assets/images/placeholders/about-sub.svg" alt="Sleek exterior of a private jet parked on the tarmac." class="sub-img" width="300" height="300" loading="lazy">
+              <div class="experience-badge">
+                <strong>15+ Years<br>Experience</strong>
+              </div>
+            </div>
+            <div class="about-text">
+              <h2 class="section-title about-text-title">Our Private Jet Charters Save You Time and Give You Comfort</h2>
+              <p>VELARION Skies redefines luxury air travel with our exclusive private jet charter services. We combine exceptional aircraft, experienced crews, and personalized service to deliver an unmatched flying experience tailored to your needs.</p>
+              <ul class="features-list">
+                <li><i class="fas fa-check-circle"></i> 24/7 concierge service and flight coordination</li>
+                <li><i class="fas fa-check-circle"></i> Access to 5,000+ airports worldwide</li>
+              </ul>
+              <div class="call-info">
+                <div class="icon"><i class="fas fa-phone-volume"></i></div>
+                <div>
+                  <span>CALL ANYTIME</span><br>
+                  <a href="tel:+1-800-835-2746" class="call-info-link">+1 (800) 835-2746</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services section -->
+      <section class="section-title">
+        <div class="section-icon"><i class="fas fa-cogs"></i></div>
+        <h2>Our Services</h2>
+        <div class="cards">
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-plane"></i></div>
+            <h3>Private Jet Charter</h3>
+            <p>On-demand flights tailored to your schedule for business or leisure.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-helicopter"></i></div>
+            <h3>Helicopter Services</h3>
+            <p>Swift transfers to city centers, yachts and remote locations.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-heartbeat"></i></div>
+            <h3>Air Ambulance</h3>
+            <p>ICU-equipped jets and qualified medical teams for urgent transport.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-utensils"></i></div>
+            <h3>Catering Services</h3>
+            <p>Gourmet dining and premium beverages customized to your preferences and dietary requirements.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-concierge-bell"></i></div>
+            <h3>Concierge Services</h3>
+            <p>24/7 personal assistance with travel arrangements, ground transportation and luxury experiences.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><i class="fas fa-users"></i></div>
+            <h3>Group Charters</h3>
+            <p>Specialized solutions for corporate retreats, sports teams, entertainment productions and large groups.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works section -->
+      <section class="how-it-works">
+        <div class="container">
+          <div class="section-title animate-on-scroll">
+            <div class="section-icon"><i class="fas fa-route"></i></div>
+            <span class="sub-title">How It Works</span>
+            <h2>Four Steps to Your Effortless Journey</h2>
+          </div>
+          <div class="how-it-works-grid">
+            <div class="how-it-works-card card animate-on-scroll">
+              <div class="icon"><i class="fas fa-question-circle"></i></div>
+              <h3>1. Inquire</h3>
+              <p>Tell us where you're going, when you need to leave, and how you like to fly.</p>
+            </div>
+            <div class="how-it-works-card card animate-on-scroll">
+              <div class="icon"><i class="fas fa-sliders-h"></i></div>
+              <h3>2. Tailor</h3>
+              <p>We match your mission with the perfect aircraft, crew, and luxury add-ons.</p>
+            </div>
+            <div class="how-it-works-card card animate-on-scroll">
+              <div class="icon"><i class="fas fa-check-circle"></i></div>
+              <h3>3. Confirm</h3>
+              <p>Approve your custom quote. We handle the rest — discreetly and precisely.</p>
+            </div>
+            <div class="how-it-works-card card animate-on-scroll">
+              <div class="icon"><i class="fas fa-plane-departure"></i></div>
+              <h3>4. Depart</h3>
+              <p>Step into your jet. From arrival to landing, you're in expert hands.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Performance and Specifications section -->
+      <section class="performance-section">
+        <div class="container">
+          <div class="section-title animate-on-scroll">
+            <div class="section-icon"><i class="fas fa-chart-line"></i></div>
+            <span class="sub-title">Private Jet Comfort</span>
+            <h2>Performance and Specifications</h2>
+          </div>
+          <div class="performance-grid">
+            <div class="performance-card">
+              <div class="icon"><i class="fas fa-couch"></i></div>
+              <div>
+                <h4>Luxury and Comfort</h4>
+                <p>Experience unparalleled luxury with premium leather seating, spacious cabins, and personalized amenities designed to make every journey as comfortable as your destination.</p>
+              </div>
+            </div>
+            <div class="performance-card">
+              <div class="icon"><i class="fas fa-shield-alt"></i></div>
+              <div>
+                <h4>Safety and Confidentiality</h4>
+                <p>We partner only with operators audited to ARGUS/WYVERN/IS-BAO standards. Recurrent crew training. NDA on request. Your privacy and security are our top priorities.</p>
+              </div>
+            </div>
+            <div class="performance-card">
+              <div class="icon"><i class="fas fa-calendar-alt"></i></div>
+              <div>
+                <h4>Personal Schedule</h4>
+                <p>Fly on your terms with flexible scheduling, no commercial airline restrictions, and the ability to change plans with minimal notice to accommodate your busy lifestyle.</p>
+              </div>
+            </div>
+            <div class="performance-card">
+              <div class="icon"><i class="fas fa-map-marked-alt"></i></div>
+              <div>
+                <h4>Global Airport Access</h4>
+                <p>Access over 5,000 airports worldwide, including smaller airfields closer to your final destination, saving you valuable time and providing unmatched convenience.</p>
+              </div>
+            </div>
+            <div class="performance-card">
+              <div class="icon"><i class="fas fa-concierge-bell"></i></div>
+              <div>
+                <h4>Concierge Services</h4>
+                <p>Our dedicated concierge team handles every detail from ground transportation to hotel reservations, ensuring a seamless door-to-door luxury experience.</p>
+              </div>
+            </div>
+            <div class="performance-card">
+              <div class="icon"><i class="fas fa-utensils"></i></div>
+              <div>
+                <h4>Gourmet Catering</h4>
+                <p>Enjoy world-class cuisine prepared by renowned chefs, with customizable menus to suit your dietary preferences and special occasions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Excellence by the Numbers section -->
+      <section class="funfacts">
+        <div class="container">
+          <div class="section-title">
+            <div class="section-icon"><i class="fas fa-chart-bar"></i></div>
+            <span class="sub-title">Why VELARION Skies?</span>
+            <h2>Excellence by the Numbers</h2>
+          </div>
+          <div class="funfacts-grid">
+            <div class="funfact-item"><h3 data-target="15+">15+</h3><p>Years of Operational Excellence</p></div>
+            <div class="funfact-item"><h3 data-target="100+">100+</h3><p>Certified Global Operators</p></div>
+            <div class="funfact-item"><h3 data-target="500+">500+</h3><p>Gourmet In-Flight Menus</p></div>
+            <div class="funfact-item"><h3 data-target="10000+">10,000+</h3><p>Flight Hours Coordinated</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popular Destinations section -->
+      <section id="popular-destinations" class="destinations">
+        <div class="container">
+          <div class="section-title">
+            <div class="section-icon"><i class="fas fa-globe-americas"></i></div>
+            <span class="sub-title">POPULAR DESTINATIONS</span>
+            <h2>Luxury Travel to the World's Most Exclusive Cities</h2>
+          </div>
+          <div class="destinations-grid">
+            <div class="destination-card featured">
+              <div class="destination-image">
+                <img src="assets/images/placeholders/destination-nyc.svg" alt="New York City" width="400" height="250" loading="lazy"/>
+                <div class="destination-overlay">
+                  <div class="destination-badge financial">Global Financial Hub</div>
+                </div>
+              </div>
+              <div class="destination-content">
+                <div class="destination-header">
+                  <h3>New York City</h3>
+                  <div class="destination-meta">
+                    <span class="destination-country">United States</span>
+                    <div class="flight-calculator">
+                      <select class="aircraft-selector" data-destination="NYC">
+                        <option value="light">Light Jet (+25% time)</option>
+                        <option value="midsize">Midsize Jet (+15% time)</option>
+                        <option value="super" selected>Super Midsize (Standard)</option>
+                        <option value="heavy">Heavy Jet (-15% time)</option>
+                        <option value="ultra">Ultra Long Range (-25% time)</option>
+                      </select>
+                      <select class="departure-selector" data-destination="NYC" data-base-times='{"VNY":5.5,"MIA":2.7,"DAL":3.1,"MDW":2.2,"LAS":4.3,"LTN":7.5,"GVA":7.8,"MCM":8.1,"DXB":12.2,"SIN":18.9,"CGH":9.2,"SYD":19.8,"HKG":15.2,"BOS":3.3,"ATL":2.1,"SEA":5.5,"FRA":7.2,"ZRH":7.6,"CDG":7.9,"FCO":8.8,"MAD":8.5,"LIS":8.2,"ARN":6.9,"HEL":7.7,"WAW":7.4,"IST":10.1,"TLV":10.8,"DOH":14.2,"BOM":14.1,"KUL":17.8,"MNL":17.1,"AKL":16.5,"JNB":13.1,"CAI":10.5,"MOW":9.8}'>
+                        <option value="VNY-5.5">From Van Nuys</option>
+                        <option value="MIA-2.7" selected>From Miami</option>
+                        <option value="DAL-3.1">From Dallas</option>
+                        <option value="MDW-2.2">From Chicago</option>
+                        <option value="LAS-4.3">From Las Vegas</option>
+                        <option value="LTN-7.5">From London</option>
+                        <option value="GVA-7.8">From Geneva</option>
+                        <option value="MCM-8.1">From Monaco</option>
+                        <option value="DXB-12.2">From Dubai</option>
+                        <option value="SIN-18.9">From Singapore</option>
+                        <option value="CGH-9.2">From São Paulo</option>
+                        <option value="SYD-19.8">From Sydney</option>
+                        <option value="HKG-15.2">From Hong Kong</option>
+                        <option value="BOS-3.3">From Boston</option>
+                        <option value="ATL-2.1">From Atlanta</option>
+                        <option value="SEA-5.5">From Seattle</option>
+                        <option value="FRA-7.2">From Frankfurt</option>
+                        <option value="ZRH-7.6">From Zurich</option>
+                        <option value="CDG-7.9">From Paris</option>
+                        <option value="FCO-8.8">From Rome</option>
+                        <option value="MAD-8.5">From Madrid</option>
+                        <option value="LIS-8.2">From Lisbon</option>
+                        <option value="ARN-6.9">From Stockholm</option>
+                        <option value="HEL-7.7">From Helsinki</option>
+                        <option value="WAW-7.4">From Warsaw</option>
+                        <option value="IST-10.1">From Istanbul</option>
+                        <option value="TLV-10.8">From Tel Aviv</option>
+                        <option value="DOH-14.2">From Doha</option>
+                        <option value="BOM-14.1">From Mumbai</option>
+                        <option value="KUL-17.8">From Kuala Lumpur</option>
+                        <option value="MNL-17.1">From Manila</option>
+                        <option value="AKL-16.5">From Auckland</option>
+                        <option value="JNB-13.1">From Johannesburg</option>
+                        <option value="CAI-10.5">From Cairo</option>
+                        <option value="MOW-9.8">From Moscow</option>
+                      </select>
+                      <div class="calc-result muted" aria-live="polite"></div>
+                    </div>
+                    <span class="airport-info"><i class="fas fa-map-marker-alt"></i> John F. Kennedy International Airport (JFK/KJFK)</span>
+                  </div>
+                </div>
+                <p class="destination-description">The ultimate urban experience. From Wall Street to Broadway, arrive in style at the city that never sleeps.</p>
+                <div class="destination-features">
+                  <span><i class="fas fa-building"></i> Manhattan Heliport</span>
+                  <span><i class="fas fa-crown"></i> VIP Terminal Access</span>
+                </div>
+                <div class="exclusive-perks">
+                  <span><i class="fas fa-utensils"></i> Michelin-starred catering</span>
+                  <span><i class="fas fa-car"></i> Luxury ground transport</span>
+                </div>
+                <div class="destination-actions">
+                  <a href="#" class="btn destination-btn primary">Book Now</a>
+                  <div class="secondary-actions">
+                    <a href="#" class="btn destination-btn secondary">Quick Quote</a>
+                    <a href="tel:+1-800-835-2746" class="btn destination-btn call">Call Direct</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="destination-card">
+              <div class="destination-image">
+                <img src="assets/images/placeholders/destination-lon.svg" alt="London" width="400" height="250" loading="lazy"/>
+                <div class="destination-overlay">
+                  <div class="destination-badge historical">Historical Capital</div>
+                </div>
+              </div>
+              <div class="destination-content">
+                <div class="destination-header">
+                  <h3>London</h3>
+                  <div class="destination-meta">
+                    <span class="destination-country">United Kingdom</span>
+                    <div class="flight-calculator">
+                      <select class="aircraft-selector" data-destination="LON">
+                        <option value="light">Light Jet (+25% time)</option>
+                        <option value="midsize">Midsize Jet (+15% time)</option>
+                        <option value="super" selected>Super Midsize (Standard)</option>
+                        <option value="heavy">Heavy Jet (-15% time)</option>
+                        <option value="ultra">Ultra Long Range (-25% time)</option>
+                      </select>
+                      <select class="departure-selector" data-destination="LON" data-base-times='{"TEB":7.2,"VNY":11.2,"MIA":8.2,"DAL":9.2,"MDW":7.9,"LAS":10.5,"GVA":1.2,"MCM":1.9,"DXB":6.9,"SIN":13.5,"CGH":11.8,"SYD":20.8,"HKG":13.2,"BOS":6.5,"ATL":7.2,"SEA":10.2,"FRA":1.0,"ZRH":1.5,"CDG":0.8,"FCO":2.2,"MAD":1.5,"LIS":2.2,"ARN":1.9,"HEL":2.2,"WAW":2.5,"IST":3.2,"TLV":3.9,"DOH":6.5,"BOM":8.2,"KUL":12.9,"MNL":14.2,"AKL":21.5,"JNB":11.5,"CAI":4.9,"MOW":3.2}'>
+                        <option value="TEB-7.2">From Teterboro</option>
+                        <option value="VNY-11.2">From Van Nuys</option>
+                        <option value="MIA-8.2" selected>From Miami</option>
+                        <option value="DAL-9.2">From Dallas</option>
+                        <option value="MDW-7.9">From Chicago</option>
+                        <option value="LAS-10.5">From Las Vegas</option>
+                        <option value="GVA-1.2">From Geneva</option>
+                        <option value="MCM-1.9">From Monaco</option>
+                        <option value="DXB-6.9">From Dubai</option>
+                        <option value="SIN-13.5">From Singapore</option>
+                        <option value="CGH-11.8">From São Paulo</option>
+                        <option value="SYD-20.8">From Sydney</option>
+                        <option value="HKG-13.2">From Hong Kong</option>
+                        <option value="BOS-6.5">From Boston</option>
+                        <option value="ATL-7.2">From Atlanta</option>
+                        <option value="SEA-10.2">From Seattle</option>
+                        <option value="FRA-1.0">From Frankfurt</option>
+                        <option value="ZRH-1.5">From Zurich</option>
+                        <option value="CDG-0.8">From Paris</option>
+                        <option value="FCO-2.2">From Rome</option>
+                        <option value="MAD-1.5">From Madrid</option>
+                        <option value="LIS-2.2">From Lisbon</option>
+                        <option value="ARN-1.9">From Stockholm</option>
+                        <option value="HEL-2.2">From Helsinki</option>
+                        <option value="WAW-2.5">From Warsaw</option>
+                        <option value="IST-3.2">From Istanbul</option>
+                        <option value="TLV-3.9">From Tel Aviv</option>
+                        <option value="DOH-6.5">From Doha</option>
+                        <option value="BOM-8.2">From Mumbai</option>
+                        <option value="KUL-12.9">From Kuala Lumpur</option>
+                        <option value="MNL-14.2">From Manila</option>
+                        <option value="AKL-21.5">From Auckland</option>
+                        <option value="JNB-11.5">From Johannesburg</option>
+                        <option value="CAI-4.9">From Cairo</option>
+                        <option value="MOW-3.2">From Moscow</option>
+                      </select>
+                      <div class="calc-result muted" aria-live="polite"></div>
+                    </div>
+                    <span class="airport-info"><i class="fas fa-map-marker-alt"></i> London Heathrow Airport (LHR/EGLL)</span>
+                  </div>
+                </div>
+                <p class="destination-description">Experience the perfect blend of history and modernity. From the financial districts to cultural landmarks, London offers endless possibilities.</p>
+                <div class="destination-features">
+                  <span><i class="fas fa-building"></i> London City Airport</span>
+                  <span><i class="fas fa-crown"></i> FBO Services</span>
+                </div>
+                <div class="exclusive-perks">
+                  <span><i class="fas fa-utensils"></i> Afternoon tea service</span>
+                  <span><i class="fas fa-car"></i> Chauffeur service</span>
+                </div>
+                <div class="destination-actions">
+                  <a href="#" class="btn destination-btn primary">Book Now</a>
+                  <div class="secondary-actions">
+                    <a href="#" class="btn destination-btn secondary">Quick Quote</a>
+                    <a href="tel:+1-800-835-2746" class="btn destination-btn call">Call Direct</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="destination-card">
+              <div class="destination-image">
+                <img src="assets/images/placeholders/destination-par.svg" alt="Paris" width="400" height="250" loading="lazy"/>
+                <div class="destination-overlay">
+                  <div class="destination-badge cultural">Cultural Capital</div>
+                </div>
+              </div>
+              <div class="destination-content">
+                <div class="destination-header">
+                  <h3>Paris</h3>
+                  <div class="destination-meta">
+                    <span class="destination-country">France</span>
+                    <div class="flight-calculator">
+                      <select class="aircraft-selector" data-destination="PAR">
+                        <option value="light">Light Jet (+25% time)</option>
+                        <option value="midsize">Midsize Jet (+15% time)</option>
+                        <option value="super" selected>Super Midsize (Standard)</option>
+                        <option value="heavy">Heavy Jet (-15% time)</option>
+                        <option value="ultra">Ultra Long Range (-25% time)</option>
+                      </select>
+                      <select class="departure-selector" data-destination="PAR" data-base-times='{"TEB":7.9,"VNY":11.9,"MIA":8.9,"DAL":9.9,"MDW":8.6,"LAS":11.2,"GVA":1.9,"MCM":2.6,"DXB":7.6,"SIN":14.2,"CGH":11.9,"SYD":21.6,"HKG":13.9,"BOS":7.2,"ATL":7.9,"SEA":10.9,"FRA":1.2,"ZRH":1.5,"CDG":0.5,"FCO":1.2,"MAD":1.2,"LIS":1.9,"ARN":2.2,"HEL":2.5,"WAW":2.2,"IST":2.9,"TLV":4.2,"DOH":7.2,"BOM":8.9,"KUL":14.5,"MNL":15.2,"AKL":22.2,"JNB":12.5,"CAI":5.9,"MOW":3.5}'>
+                        <option value="TEB-7.9">From Teterboro</option>
+                        <option value="VNY-11.9">From Van Nuys</option>
+                        <option value="MIA-8.9" selected>From Miami</option>
+                        <option value="DAL-9.9">From Dallas</option>
+                        <option value="MDW-8.6">From Chicago</option>
+                        <option value="LAS-11.2">From Las Vegas</option>
+                        <option value="GVA-1.9">From Geneva</option>
+                        <option value="MCM-2.6">From Monaco</option>
+                        <option value="DXB-7.6">From Dubai</option>
+                        <option value="SIN-14.2">From Singapore</option>
+                        <option value="CGH-11.9">From São Paulo</option>
+                        <option value="SYD-21.6">From Sydney</option>
+                        <option value="HKG-13.9">From Hong Kong</option>
+                        <option value="BOS-7.2">From Boston</option>
+                        <option value="ATL-7.9">From Atlanta</option>
+                        <option value="SEA-10.9">From Seattle</option>
+                        <option value="FRA-1.2">From Frankfurt</option>
+                        <option value="ZRH-1.5">From Zurich</option>
+                        <option value="CDG-0.5">From Paris</option>
+                        <option value="FCO-1.2">From Rome</option>
+                        <option value="MAD-1.2">From Madrid</option>
+                        <option value="LIS-1.9">From Lisbon</option>
+                        <option value="ARN-2.2">From Stockholm</option>
+                        <option value="HEL-2.5">From Helsinki</option>
+                        <option value="WAW-2.2">From Warsaw</option>
+                        <option value="IST-2.9">From Istanbul</option>
+                        <option value="TLV-4.2">From Tel Aviv</option>
+                        <option value="DOH-7.2">From Doha</option>
+                        <option value="BOM-8.9">From Mumbai</option>
+                        <option value="KUL-14.5">From Kuala Lumpur</option>
+                        <option value="MNL-15.2">From Manila</option>
+                        <option value="AKL-22.2">From Auckland</option>
+                        <option value="JNB-12.5">From Johannesburg</option>
+                        <option value="CAI-5.9">From Cairo</option>
+                        <option value="MOW-3.5">From Moscow</option>
+                      </select>
+                      <div class="calc-result muted" aria-live="polite"></div>
+                    </div>
+                    <span class="airport-info"><i class="fas fa-map-marker-alt"></i> Paris Le Bourget Airport (LBG/LFPB)</span>
+                  </div>
+                </div>
+                <p class="destination-description">The city of lights awaits. Experience world-class cuisine, art, and fashion in one of the world's most romantic destinations.</p>
+                <div class="destination-features">
+                  <span><i class="fas fa-building"></i> Le Bourget FBO</span>
+                  <span><i class="fas fa-crown"></i> Fast Track Security</span>
+                </div>
+                <div class="exclusive-perks">
+                  <span><i class="fas fa-utensils"></i> French gourmet catering</span>
+                  <span><i class="fas fa-car"></i> Limousine service</span>
+                </div>
+                <div class="destination-actions">
+                  <a href="#" class="btn destination-btn primary">Book Now</a>
+                  <div class="secondary-actions">
+                    <a href="#" class="btn destination-btn secondary">Quick Quote</a>
+                    <a href="tel:+1-800-835-2746" class="btn destination-btn call">Call Direct</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="destination-card">
+              <div class="destination-image">
+                <img src="assets/images/placeholders/destination-tyo.svg" alt="Tokyo" width="400" height="250" loading="lazy"/>
+                <div class="destination-overlay">
+                  <div class="destination-badge technological">Tech Innovation Hub</div>
+                </div>
+              </div>
+              <div class="destination-content">
+                <div class="destination-header">
+                  <h3>Tokyo</h3>
+                  <div class="destination-meta">
+                    <span class="destination-country">Japan</span>
+                    <div class="flight-calculator">
+                      <select class="aircraft-selector" data-destination="TYO">
+                        <option value="light">Light Jet (+25% time)</option>
+                        <option value="midsize">Midsize Jet (+15% time)</option>
+                        <option value="super" selected>Super Midsize (Standard)</option>
+                        <option value="heavy">Heavy Jet (-15% time)</option>
+                        <option value="ultra">Ultra Long Range (-25% time)</option>
+                      </select>
+                      <select class="departure-selector" data-destination="TYO" data-base-times='{"TEB":13.9,"VNY":12.2,"MIA":15.5,"DAL":14.2,"MDW":13.5,"LAS":14.9,"GVA":11.5,"MCM":12.2,"DXB":7.5,"SIN":6.2,"CGH":18.9,"SYD":9.5,"HKG":3.9,"BOS":14.5,"ATL":15.2,"SEA":10.9,"FRA":10.5,"ZRH":10.9,"CDG":11.2,"FCO":12.5,"MAD":11.5,"LIS":12.2,"ARN":8.2,"HEL":8.9,"WAW":9.5,"IST":8.2,"TLV":9.9,"DOH":7.2,"BOM":6.9,"KUL":4.9,"MNL":3.5,"AKL":10.2,"JNB":16.5,"CAI":11.9,"MOW":8.5}'>
+                        <option value="TEB-13.9">From Teterboro</option>
+                        <option value="VNY-12.2">From Van Nuys</option>
+                        <option value="MIA-15.5" selected>From Miami</option>
+                        <option value="DAL-14.2">From Dallas</option>
+                        <option value="MDW-13.5">From Chicago</option>
+                        <option value="LAS-14.9">From Las Vegas</option>
+                        <option value="GVA-11.5">From Geneva</option>
+                        <option value="MCM-12.2">From Monaco</option>
+                        <option value="DXB-7.5">From Dubai</option>
+                        <option value="SIN-6.2">From Singapore</option>
+                        <option value="CGH-18.9">From São Paulo</option>
+                        <option value="SYD-9.5">From Sydney</option>
+                        <option value="HKG-3.9">From Hong Kong</option>
+                        <option value="BOS-14.5">From Boston</option>
+                        <option value="ATL-15.2">From Atlanta</option>
+                        <option value="SEA-10.9">From Seattle</option>
+                        <option value="FRA-10.5">From Frankfurt</option>
+                        <option value="ZRH-10.9">From Zurich</option>
+                        <option value="CDG-11.2">From Paris</option>
+                        <option value="FCO-12.5">From Rome</option>
+                        <option value="MAD-11.5">From Madrid</option>
+                        <option value="LIS-12.2">From Lisbon</option>
+                        <option value="ARN-8.2">From Stockholm</option>
+                        <option value="HEL-8.9">From Helsinki</option>
+                        <option value="WAW-9.5">From Warsaw</option>
+                        <option value="IST-8.2">From Istanbul</option>
+                        <option value="TLV-9.9">From Tel Aviv</option>
+                        <option value="DOH-7.2">From Doha</option>
+                        <option value="BOM-6.9">From Mumbai</option>
+                        <option value="KUL-4.9">From Kuala Lumpur</option>
+                        <option value="MNL-3.5">From Manila</option>
+                        <option value="AKL-10.2">From Auckland</option>
+                        <option value="JNB-16.5">From Johannesburg</option>
+                        <option value="CAI-11.9">From Cairo</option>
+                        <option value="MOW-8.5">From Moscow</option>
+                      </select>
+                      <div class="calc-result muted" aria-live="polite"></div>
+                    </div>
+                    <span class="airport-info"><i class="fas fa-map-marker-alt"></i> Narita International Airport (NRT/RJAA)</span>
+                  </div>
+                </div>
+                <p class="destination-description">Where ancient traditions meet cutting-edge technology. Experience the perfect blend of past and future in this vibrant metropolis.</p>
+                <div class="destination-features">
+                  <span><i class="fas fa-building"></i> Haneda Airport</span>
+                  <span><i class="fas fa-crown"></i> VIP Terminal</span>
+                </div>
+                <div class="exclusive-perks">
+                  <span><i class="fas fa-utensils"></i> Kaiseki cuisine</span>
+                  <span><i class="fas fa-car"></i> Private transfer</span>
+                </div>
+                <div class="destination-actions">
+                  <a href="#" class="btn destination-btn primary">Book Now</a>
+                  <div class="secondary-actions">
+                    <a href="#" class="btn destination-btn secondary">Quick Quote</a>
+                    <a href="tel:+1-800-835-2746" class="btn destination-btn call">Call Direct</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="destination-card">
+              <div class="destination-image">
+                <img src="assets/images/placeholders/destination-dxb.svg" alt="Dubai" width="400" height="250" loading="lazy"/>
+                <div class="destination-overlay">
+                  <div class="destination-badge futuristic">Future Forward Hub</div>
+                </div>
+              </div>
+              <div class="destination-content">
+                <div class="destination-header">
+                  <h3>Dubai</h3>
+                  <div class="destination-meta">
+                    <span class="destination-country">UAE</span>
+                    <div class="flight-calculator">
+                      <select class="aircraft-selector" data-destination="DXB">
+                        <option value="light">Light Jet (+25% time)</option>
+                        <option value="midsize">Midsize Jet (+15% time)</option>
+                        <option value="super" selected>Super Midsize (Standard)</option>
+                        <option value="heavy">Heavy Jet (-15% time)</option>
+                        <option value="ultra">Ultra Long Range (-25% time)</option>
+                      </select>
+                      <select class="departure-selector" data-destination="DXB" data-base-times='{"TEB":12.2,"VNY":16.2,"MIA":14.5,"DAL":15.2,"MDW":13.9,"LAS":15.5,"GVA":6.5,"MCM":7.2,"SIN":5.9,"CGH":11.5,"SYD":13.9,"HKG":7.5,"TYO":7.2,"BOS":13.2,"ATL":13.9,"SEA":15.5,"FRA":6.2,"ZRH":6.9,"CDG":6.5,"FCO":5.2,"MAD":7.5,"LIS":8.2,"ARN":5.9,"HEL":6.5,"WAW":5.5,"IST":2.5,"TLV":3.2,"DOH":1.0,"BOM":3.2,"KUL":6.9,"MNL":8.2,"AKL":14.5,"JNB":7.9,"CAI":3.5,"MOW":4.9}'>
+                        <option value="TEB-12.2">From Teterboro</option>
+                        <option value="VNY-16.2">From Van Nuys</option>
+                        <option value="MIA-14.5" selected>From Miami</option>
+                        <option value="DAL-15.2">From Dallas</option>
+                        <option value="MDW-13.9">From Chicago</option>
+                        <option value="LAS-15.5">From Las Vegas</option>
+                        <option value="GVA-6.5">From Geneva</option>
+                        <option value="MCM-7.2">From Monaco</option>
+                        <option value="SIN-5.9">From Singapore</option>
+                        <option value="CGH-11.5">From São Paulo</option>
+                        <option value="SYD-13.9">From Sydney</option>
+                        <option value="HKG-7.5">From Hong Kong</option>
+                        <option value="TYO-7.2">From Tokyo</option>
+                        <option value="BOS-13.2">From Boston</option>
+                        <option value="ATL-13.9">From Atlanta</option>
+                        <option value="SEA-15.5">From Seattle</option>
+                        <option value="FRA-6.2">From Frankfurt</option>
+                        <option value="ZRH-6.9">From Zurich</option>
+                        <option value="CDG-6.5">From Paris</option>
+                        <option value="FCO-5.2">From Rome</option>
+                        <option value="MAD-7.5">From Madrid</option>
+                        <option value="LIS-8.2">From Lisbon</option>
+                        <option value="ARN-5.9">From Stockholm</option>
+                        <option value="HEL-6.5">From Helsinki</option>
+                        <option value="WAW-5.5">From Warsaw</option>
+                        <option value="IST-2.5">From Istanbul</option>
+                        <option value="TLV-3.2">From Tel Aviv</option>
+                        <option value="DOH-1.0">From Doha</option>
+                        <option value="BOM-3.2">From Mumbai</option>
+                        <option value="KUL-6.9">From Kuala Lumpur</option>
+                        <option value="MNL-8.2">From Manila</option>
+                        <option value="AKL-14.5">From Auckland</option>
+                        <option value="JNB-7.9">From Johannesburg</option>
+                        <option value="CAI-3.5">From Cairo</option>
+                        <option value="MOW-4.9">From Moscow</option>
+                      </select>
+                      <div class="calc-result muted" aria-live="polite"></div>
+                    </div>
+                    <span class="airport-info"><i class="fas fa-map-marker-alt"></i> Dubai International Airport (DXB/OMDB)</span>
+                  </div>
+                </div>
+                <p class="destination-description">Experience opulence at its finest in this desert oasis of innovation and luxury. From architectural marvels to world-class shopping.</p>
+                <div class="destination-features">
+                  <span><i class="fas fa-building"></i> Al Maktoum Airport</span>
+                  <span><i class="fas fa-crown"></i> Gold Class Lounge</span>
+                </div>
+                <div class="exclusive-perks">
+                  <span><i class="fas fa-utensils"></i> Middle Eastern delicacies</span>
+                  <span><i class="fas fa-car"></i> Luxury SUV service</span>
+                </div>
+                <div class="destination-actions">
+                  <a href="#" class="btn destination-btn primary">Book Now</a>
+                  <div class="secondary-actions">
+                    <a href="#" class="btn destination-btn secondary">Quick Quote</a>
+                    <a href="tel:+1-800-835-2746" class="btn destination-btn call">Call Direct</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="destination-card">
+              <div class="destination-image">
+                <img src="assets/images/placeholders/destination-syd.svg" alt="Sydney" width="400" height="250" loading="lazy"/>
+                <div class="destination-overlay">
+                  <div class="destination-badge natural">Natural Wonder</div>
+                </div>
+              </div>
+              <div class="destination-content">
+                <div class="destination-header">
+                  <h3>Sydney</h3>
+                  <div class="destination-meta">
+                    <span class="destination-country">Australia</span>
+                    <div class="flight-calculator">
+                      <select class="aircraft-selector" data-destination="SYD">
+                        <option value="light">Light Jet (+25% time)</option>
+                        <option value="midsize">Midsize Jet (+15% time)</option>
+                        <option value="super" selected>Super Midsize (Standard)</option>
+                        <option value="heavy">Heavy Jet (-15% time)</option>
+                        <option value="ultra">Ultra Long Range (-25% time)</option>
+                      </select>
+                      <select class="departure-selector" data-destination="SYD" data-base-times='{"TEB":20.3,"VNY":18.5,"MIA":21.8,"DAL":20.5,"MDW":19.8,"LAS":20.2,"GVA":21.2,"MCM":21.5,"DXB":14.2,"SIN":10.8,"CGH":15.2,"HKG":9.8,"TYO":10.5,"BOS":20.8,"ATL":21.5,"SEA":15.8,"FRA":21.5,"ZRH":21.8,"CDG":22.0,"FCO":22.5,"MAD":22.2,"LIS":22.8,"ARN":19.5,"HEL":20.2,"WAW":20.8,"IST":18.5,"TLV":19.2,"DOH":16.8,"BOM":10.5,"KUL":8.2,"MNL":7.8,"AKL":3.5,"JNB":14.8,"CAI":17.5,"MOW":18.2}'>
+                        <option value="TEB-20.3">From Teterboro</option>
+                        <option value="VNY-18.5">From Van Nuys</option>
+                        <option value="MIA-21.8" selected>From Miami</option>
+                        <option value="DAL-20.5">From Dallas</option>
+                        <option value="MDW-19.8">From Chicago</option>
+                        <option value="LAS-20.2">From Las Vegas</option>
+                        <option value="GVA-21.2">From Geneva</option>
+                        <option value="MCM-21.5">From Monaco</option>
+                        <option value="DXB-14.2">From Dubai</option>
+                        <option value="SIN-10.8">From Singapore</option>
+                        <option value="CGH-15.2">From São Paulo</option>
+                        <option value="HKG-9.8">From Hong Kong</option>
+                        <option value="TYO-10.5">From Tokyo</option>
+                        <option value="BOS-20.8">From Boston</option>
+                        <option value="ATL-21.5">From Atlanta</option>
+                        <option value="SEA-15.8">From Seattle</option>
+                        <option value="FRA-21.5">From Frankfurt</option>
+                        <option value="ZRH-21.8">From Zurich</option>
+                        <option value="CDG-22.0">From Paris</option>
+                        <option value="FCO-22.5">From Rome</option>
+                        <option value="MAD-22.2">From Madrid</option>
+                        <option value="LIS-22.8">From Lisbon</option>
+                        <option value="ARN-19.5">From Stockholm</option>
+                        <option value="HEL-20.2">From Helsinki</option>
+                        <option value="WAW-20.8">From Warsaw</option>
+                        <option value="IST-18.5">From Istanbul</option>
+                        <option value="TLV-19.2">From Tel Aviv</option>
+                        <option value="DOH-16.8">From Doha</option>
+                        <option value="BOM-10.5">From Mumbai</option>
+                        <option value="KUL-8.2">From Kuala Lumpur</option>
+                        <option value="MNL-7.8">From Manila</option>
+                        <option value="AKL-3.5">From Auckland</option>
+                        <option value="JNB-14.8">From Johannesburg</option>
+                        <option value="CAI-17.5">From Cairo</option>
+                        <option value="MOW-18.2">From Moscow</option>
+                      </select>
+                      <div class="calc-result muted" aria-live="polite"></div>
+                    </div>
+                    <span class="airport-info"><i class="fas fa-map-marker-alt"></i> Sydney Kingsford Smith Airport (SYD/YSSY)</span>
+                  </div>
+                </div>
+                <p class="destination-description">Discover the stunning harbor city with its iconic Opera House and world-famous beaches. Experience the best of Australian culture and lifestyle.</p>
+                <div class="destination-features">
+                  <span><i class="fas fa-building"></i> Bankstown Airport</span>
+                  <span><i class="fas fa-crown"></i> Private Terminal</span>
+                </div>
+                <div class="exclusive-perks">
+                  <span><i class="fas fa-utensils"></i> Australian cuisine</span>
+                  <span><i class="fas fa-car"></i> Luxury car service</span>
+                </div>
+                <div class="destination-actions">
+                  <a href="#" class="btn destination-btn primary">Book Now</a>
+                  <div class="secondary-actions">
+                    <a href="#" class="btn destination-btn secondary">Quick Quote</a>
+                    <a href="tel:+1-800-835-2746" class="btn destination-btn call">Call Direct</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials section -->
+      <section class="section-title">
+        <div class="section-icon"><i class="fas fa-comments"></i></div>
+        <h2>What Our Clients Say</h2>
+        <div class="testimonials">
+          <div class="testimonial">
+            <p>"Flying with VELARION felt like having my own airborne suite. Discreet, flawless, unforgettable."</p>
+            <cite>— R.T., New York</cite>
+          </div>
+          <div class="testimonial">
+            <p>"Their team handled everything end-to-end. On time, immaculate aircraft, total peace of mind."</p>
+            <cite>— S.M., London</cite>
+          </div>
+          <div class="testimonial">
+            <p>"From the first call to touchdown, the experience was seamless. We'll be back."</p>
+            <cite>— L.G., Dubai</cite>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ section -->
+      <section class="section-title">
+        <div class="section-icon"><i class="fas fa-question-circle"></i></div>
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What types of aircraft are in your network?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Light, midsize, heavy and ultra-long range jets — plus helicopters. Each operator is vetted for safety and service.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How soon can I book?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>We can often arrange flights within 4–6 hours depending on availability. For peak seasons, please book early.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Are pets allowed?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Pets are accepted on most routes — please notify us at booking so we can arrange crew and cabin requirements.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What safety standards do you follow?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>We partner only with operators audited to ARGUS/WYVERN/IS-BAO standards. Recurrent crew training. NDA on request.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can you accommodate special dietary requirements?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, our catering services can accommodate any dietary restriction or preference with advance notice.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What is your cancellation policy?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Cancellations made 48+ hours before departure receive a full refund. Within 48 hours, 50% refund is provided.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Do you offer membership programs?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes, we offer exclusive membership programs with benefits including priority booking, fixed rates, and additional flight hours.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How does pricing work for private charters?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Pricing depends on aircraft type, distance, duration, and services requested. We provide transparent quotes with no hidden fees.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick CTA section -->
+      <section class="text-center quick-cta">
+        <h2>We Fly You To Over 20,000 Destinations Worldwide</h2>
+        <p class="muted">Request a quote and our team will respond promptly with a tailored solution.</p>
+        <div>
+          <a href="#" class="btn">Request a Quote</a>
+          <button class="btn btn--outline" id="quickQuoteBtn">Quick Quote</button>
+        </div>
+        <p class="text-gold subcopy">No membership. No hidden fees. 15-minute response. 24/7 concierge.</p>
+        <p class="subcopy">Trusted by executives, luxury travel advisors, and film production teams worldwide.</p>
+      </section>
+
+      <!-- Contact section -->
+      <section class="text-center contact-section">
+        <h2>Contact Us</h2>
+        <p>Ready to experience luxury air travel? Contact us today.</p>
+        <p><strong>CALL ANYTIME: +1 (800) 835-2746</strong></p>
+        <p>Or email us at <a href="mailto:charter@velarion-skies.com">charter@velarion-skies.com</a></p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Rich footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <strong class="footer-title">VELARION Skies</strong>
+          <p class="footer-text">Exceptional private jet charters with uncompromising luxury, safety and personalised attention.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-title text-gold">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Destinations</a></li>
+            <li><a href="#">Fleet</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title text-gold">Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">Accessibility</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title text-gold">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+1-800-835-2746"><i class="fas fa-phone"></i>+1 (800) 835-2746</a></li>
+            <li><a href="mailto:charter@velarion-skies.com"><i class="fas fa-envelope"></i>charter@velarion-skies.com</a></li>
+            <li><span><i class="fas fa-map-marker-alt"></i>1250 Aviation Blvd, Los Angeles, CA 90045</span></li>
+            <li><span><i class="fas fa-clock"></i>24/7 Customer Support</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 VELARION Skies. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

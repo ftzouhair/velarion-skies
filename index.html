@@ -1,4 +1,19 @@
 <!DOCTYPE html>
+<!-- Refactoring Anchor Points: 
+  1. Header/Navigation - <header role="banner">
+  2. Hero Section - <section class="hero hero-gradient-subtle animate-on-scroll">
+  3. About Section - <section class="about animate-on-scroll">
+  4. Services Section - <section class="section-title animate-on-scroll"> (first instance with services)
+  5. How It Works Section - <section class="how-it-works">
+  6. Performance Section - <section class="performance-section">
+  7. Excellence by the Numbers Section - <section class="funfacts">
+  8. Popular Destinations Section - <section id="popular-destinations" class="destinations">
+  9. Testimonials Section - <section class="section-title animate-on-scroll"> (instance with testimonials)
+  10. FAQ Section - <section class="section-title animate-on-scroll"> (instance with FAQ items)
+  11. Quick CTA Section - <section class="text-center quick-cta animate-on-scroll">
+  12. Contact Section - <section class="text-center contact-section animate-on-scroll">
+  13. Footer - <footer class="main-footer" role="contentinfo">
+-->
 <html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
@@ -120,8 +135,8 @@
           </svg>
         </button>
         <button id="theme-switcher" class="theme-switcher" aria-label="Switch theme" aria-pressed="false">
-          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.64 5.64c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l1.06 1.06c.39.39 1.02.39 1.41 0s.39-1.02 0-1.41L5.64 5.64zm12.73 12.73c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l1.06 1.06c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41l-1.06-1.06zM5.64 18.36l-1.06-1.06c-.39-.39-.39-1.02 0-1.41s1.02-.39 1.41 0l1.06 1.06c.39.39.39 1.02 0 1.41s-1.02.39-1.41 0zm12.73-12.73l-1.06-1.06c-.39-.39-.39-1.02 0-1.41s1.02-.39 1.41 0l1.06 1.06c.39.39.39 1.02 0 1.41-.39.39-1.02.39-1.41 0z"/></svg>
-          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.64-.11 2.4-.31-.3-.52-.47-1.12-.47-1.77 0-1.71 1.39-3.1 3.1-3.1.65 0 1.25.17 1.77.47C19.89 18.64 21 17.83 21 16.95c0-4.97-4.03-9-9-9z"/></svg>
+          <svg class="icon-sun" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><use href="assets/icons/sprite.svg#icon-sun"></use></svg>
+          <svg class="icon-moon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><use href="assets/icons/sprite.svg#icon-moon"></use></svg>
         </button>
       </div>
     </div>
@@ -144,9 +159,7 @@
         <div class="hero-scroll-indicator">
           <span>Scroll to Explore</span>
           <!-- Chevron down SVG -->
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <use href="assets/icons/sprite.svg#icon-ui-arrow-up" transform="rotate(180, 12, 12)"></use>
-          </svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="assets/icons/sprite.svg#icon-ui-arrow-down"></use></svg>
         </div>
       </section>
 
@@ -783,77 +796,81 @@
       <section class="section-title animate-on-scroll">
   <div class="section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 2H5c-1.1 0-2 .9-2 2v14l4-4h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-6 13h-2v-2h2v2zm2.07-7.75c-.9.92-1.07 1.25-1.07 2.25h-2v-.5c0-1.1.3-1.75 1.2-2.65.9-.9 1.8-1.5 1.8-2.85 0-1.54-1.26-2.5-2.5-2.5-1.4 0-2.4 1.04-2.4 2.4H9c0-2.2 1.6-4.4 4.2-4.4 2.5 0 4.5 1.6 4.5 4.1 0 1.6-.8 2.3-1.63 3.15z"/></svg></div>
         <h2>Frequently Asked Questions</h2>
-        <div class="faq">
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>What types of aircraft are in your network?</span>
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Light, midsize, heavy and ultra-long range jets — plus helicopters. Each operator is vetted for safety and service.</p>
+        <div class="faq faq-columns">
+          <div class="faq-column">
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>What types of aircraft are in your network?</span>
+                <span>+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Light, midsize, heavy and ultra-long range jets — plus helicopters. Each operator is vetted for safety and service.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>How soon can I book?</span>
+                <span>+</span>
+              </button>
+              <div class="faq-answer">
+                <p>We can often arrange flights within 4–6 hours depending on availability. For peak seasons, please book early.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Are pets allowed?</span>
+                <span>+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Pets are accepted on most routes — please notify us at booking so we can arrange crew and cabin requirements.</p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>What safety standards do you follow?</span>
+                <span>+</span>
+              </button>
+              <div class="faq-answer">
+                <p>We partner only with operators audited to ARGUS/WYVERN/IS-BAO standards. Recurrent crew training. NDA on request.</p>
+              </div>
             </div>
           </div>
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>How soon can I book?</span>
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <p>We can often arrange flights within 4–6 hours depending on availability. For peak seasons, please book early.</p>
+          <div class="faq-column">
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Can you accommodate special dietary requirements?</span>
+                <span>+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Yes, our catering services can accommodate any dietary restriction or preference with advance notice.</p>
+              </div>
             </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>Are pets allowed?</span>
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Pets are accepted on most routes — please notify us at booking so we can arrange crew and cabin requirements.</p>
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>What is your cancellation policy?</span>
+                <span>+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Cancellations made 48+ hours before departure receive a full refund. Within 48 hours, 50% refund is provided.</p>
+              </div>
             </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>What safety standards do you follow?</span>
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <p>We partner only with operators audited to ARGUS/WYVERN/IS-BAO standards. Recurrent crew training. NDA on request.</p>
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Do you offer membership programs?</span>
+                <span>+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Yes, we offer exclusive membership programs with benefits including priority booking, fixed rates, and additional flight hours.</p>
+              </div>
             </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>Can you accommodate special dietary requirements?</span>
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Yes, our catering services can accommodate any dietary restriction or preference with advance notice.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>What is your cancellation policy?</span>
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Cancellations made 48+ hours before departure receive a full refund. Within 48 hours, 50% refund is provided.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>Do you offer membership programs?</span>
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Yes, we offer exclusive membership programs with benefits including priority booking, fixed rates, and additional flight hours.</p>
-            </div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>How does pricing work for private charters?</span>
-              <span>+</span>
-            </button>
-            <div class="faq-answer">
-              <p>Pricing depends on aircraft type, distance, duration, and services requested. We provide transparent quotes with no hidden fees.</p>
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>How does pricing work for private charters?</span>
+                <span>+</span>
+              </button>
+              <div class="faq-answer">
+                <p>Pricing depends on aircraft type, distance, duration, and services requested. We provide transparent quotes with no hidden fees.</p>
+              </div>
             </div>
           </div>
         </div>

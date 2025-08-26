@@ -1,0 +1,114 @@
+/* Parallax scrolling effects for hero section */
+
+/* Base styles for parallax layers */
+.hero-parallax-bg,
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%; /* Extend height to prevent gaps during scroll */
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: fixed; We'll use JS for better control/performance */
+  will-change: transform; /* Hint to browser for optimization */
+}
+
+/* Specific background for the main parallax layer */
+.hero-parallax-bg {
+  background-image: url('../images/hero-background.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* Parallax layers for depth (ensure these are subtle) */
+.parallax-layer[data-depth="0.1"] {
+  background: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 0%, transparent 20%),
+              radial-gradient(circle at 80% 70%, rgba(255,255,255,0.05) 0%, transparent 15%);
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.parallax-layer[data-depth="0.2"] {
+  background: radial-gradient(circle at 30% 60%, rgba(255,255,255,0.15) 0%, transparent 25%),
+              radial-gradient(circle at 70% 20%, rgba(255,255,255,0.1) 0%, transparent 20%);
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.parallax-layer[data-depth="0.3"] {
+  background: radial-gradient(circle at 50% 40%, rgba(255,255,255,0.2) 0%, transparent 30%);
+  opacity: 0.1;
+  z-index: 1;
+}
+
+/* Ensure hero content stays above parallax layers */
+.hero-content {
+  position: relative;
+  z-index: 3; /* Above parallax layers */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Ensure scroll indicator is on top */
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 4; /* Above content */
+  /* Remove bounce animation if desired for regal feel */
+  /* animation: bounce 2s infinite; */
+}
+
+/* Subtle scroll indicator animation (optional, less bouncy) */
+@keyframes subtlePulse {
+  0%, 100% {
+    opacity: 0.7;
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+.hero-scroll-indicator {
+  animation: subtlePulse 2s ease-in-out infinite;
+}
+
+/* Responsive adjustments for parallax */
+@media (max-width: 768px) {
+  .hero-parallax-bg,
+  .parallax-layer {
+    height: 110%;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-parallax-bg,
+  .parallax-layer {
+    height: 105%;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+}

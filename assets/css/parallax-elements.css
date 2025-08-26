@@ -1,0 +1,36 @@
+/* Decorative parallax elements for sections */
+
+.parallax-element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* Specific decorative elements for sections */
+.how-it-works .parallax-element {
+  background: radial-gradient(circle at 10% 20%, rgba(200, 164, 107, 0.05) 0%, transparent 15%),
+              radial-gradient(circle at 90% 80%, rgba(7, 31, 51, 0.05) 0%, transparent 15%);
+}
+
+.performance-section .parallax-element {
+  background: radial-gradient(circle at 20% 80%, rgba(200, 164, 107, 0.03) 0%, transparent 10%),
+              radial-gradient(circle at 80% 30%, rgba(7, 31, 51, 0.03) 0%, transparent 10%);
+}
+
+.destinations .parallax-element {
+  background: radial-gradient(circle at 30% 40%, rgba(200, 164, 107, 0.04) 0%, transparent 12%),
+              radial-gradient(circle at 70% 60%, rgba(7, 31, 51, 0.04) 0%, transparent 12%);
+}
+
+/* Ensure parallax elements don't interfere with content */
+section {
+  position: relative;
+}

@@ -1,0 +1,191 @@
+/* Luxury Hover & Focus States - UI Micro-Interactions */
+
+:root {
+  --luxury-scale: 1.03;
+  --luxury-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  --luxury-shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.25);
+  --luxury-glass-bg: rgba(255, 255, 255, 0.15);
+  --luxury-glass-border: rgba(255, 255, 255, 0.2);
+  --luxury-glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Global transition settings */
+* {
+  transition-property: transform, box-shadow, background-color, border-color, color;
+  transition-duration: var(--motion-fast);
+  transition-timing-function: var(--ease-standard);
+}
+
+/* Luxury Buttons */
+.btn {
+  /* Base shadow and transition already defined in critical.css */
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  backdrop-filter: blur(5px);
+  transform: translateZ(0); /* Force hardware acceleration */
+}
+
+.btn:hover,
+.btn:focus-visible {
+  transform: scale(var(--luxury-scale));
+  box-shadow: var(--luxury-shadow-hover);
+  z-index: 10;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Outline buttons */
+.btn--outline:hover,
+.btn--outline:focus-visible {
+  transform: scale(var(--luxury-scale));
+  box-shadow: var(--luxury-shadow-hover);
+}
+
+/* Luxury Cards */
+.card {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transform: translateZ(0); /* Force hardware acceleration */
+  /* Optional glass-morphism effect - can be enabled by adding .glass class */
+}
+
+.card.glass {
+  background: var(--luxury-glass-bg);
+  border: 1px solid var(--luxury-glass-border);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--luxury-glass-shadow);
+}
+
+.card:hover,
+.card:focus-within {
+  transform: scale(var(--luxury-scale));
+  box-shadow: var(--luxury-shadow-hover);
+  z-index: 10;
+}
+
+.card:active {
+  transform: scale(0.98);
+}
+
+/* Card elements */
+.card-icon {
+  transition: all var(--motion-fast) var(--ease-standard);
+}
+
+.card:hover .card-icon,
+.card:focus-within .card-icon {
+  transform: scale(1.1);
+}
+
+/* Form elements */
+input:focus,
+select:focus,
+textarea:focus {
+  transform: scale(1.01);
+  box-shadow: var(--luxury-shadow);
+}
+
+/* Navigation links */
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer links */
+.main-footer a:hover,
+.main-footer a:focus-visible {
+  transform: scale(1.05);
+}
+
+/* FAQ items */
+.faq-item button:hover,
+.faq-item button:focus-visible {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Destination cards */
+.destination-card:hover,
+.destination-card:focus-within {
+  transform: scale(var(--luxury-scale));
+  box-shadow: var(--luxury-shadow-hover);
+}
+
+.destination-card:active {
+  transform: scale(0.98);
+}
+
+/* Performance cards */
+.performance-card:hover,
+.performance-card:focus-within {
+  transform: scale(var(--luxury-scale));
+  box-shadow: var(--luxury-shadow-hover);
+}
+
+.performance-card:active {
+  transform: scale(0.98);
+}
+
+/* Testimonial cards */
+.testimonial:hover,
+.testimonial:focus-within {
+  transform: scale(1.02);
+  box-shadow: var(--luxury-shadow);
+}
+
+/* Fun fact items */
+.funfact-item:hover,
+.funfact-item:focus-within {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure focus states match hover states for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Remove default focus styles that might conflict */
+.btn:focus,
+.card:focus,
+input:focus,
+select:focus,
+textarea:focus,
+.nav-links a:focus,
+.main-footer a:focus,
+.faq-item button:focus,
+.destination-card:focus,
+.performance-card:focus,
+.testimonial:focus,
+.funfact-item:focus {
+  outline: none;
+}
+
+/* Special handling for elements that should not scale but still get shadow */
+.hero-scroll-indicator:hover,
+.hero-scroll-indicator:focus-visible {
+  transform: none;
+  box-shadow: 0 5px 15px rgba(200, 164, 107, 0.4);
+}
+
+/* Animation for glass effect */
+@keyframes glass-appear {
+  0% {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    backdrop-filter: blur(10px);
+  }
+}
+
+.card.glass {
+  animation: glass-appear 0.5s var(--luxury-ease) forwards;
+}

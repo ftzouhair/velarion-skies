@@ -1,0 +1,434 @@
+/* Base styles for both themes */
+body {
+  background: var(--background);
+  color: var(--text);
+}
+
+.nav,
+.card,
+.panel,
+.section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+/* Theme Switcher Button */
+.theme-switcher {
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--text);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+.theme-switcher.switching {
+  transform: rotate(360deg);
+}
+
+/* Smooth transitions for theme changes */
+.theme-transition,
+.theme-transition * {
+  transition: background-color 320ms cubic-bezier(0.4,0,0.2,1), 
+              color 320ms cubic-bezier(0.4,0,0.2,1),
+              border-color 320ms cubic-bezier(0.4,0,0.2,1),
+              fill 320ms cubic-bezier(0.4,0,0.2,1),
+              stroke 320ms cubic-bezier(0.4,0,0.2,1) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-transition,
+  .theme-transition * {
+    transition: none !important;
+  }
+}
+
+.theme-switcher:hover {
+  background-color: rgba(128, 128, 128, 0.1);
+  transform: scale(1.1);
+}
+
+.theme-switcher svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Fixed position theme switcher (for pages that still use it) */
+.fixed-theme-switcher {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: var(--surface);
+  border: 1px solid var(--gold);
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.fixed-theme-switcher:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Icon visibility */
+.theme-switcher .icon-moon { display: none; }
+.theme-switcher .icon-sun { display: block; }
+
+[data-theme='dark'] .theme-switcher .icon-moon { display: block; }
+[data-theme='dark'] .theme-switcher .icon-sun { display: none; }
+
+/* Fixed position theme switcher icon visibility */
+.fixed-theme-switcher .icon-moon { display: none; }
+.fixed-theme-switcher .icon-sun { display: block; }
+
+[data-theme='dark'] .fixed-theme-switcher .icon-moon { display: block; }
+[data-theme='dark'] .fixed-theme-switcher .icon-sun { display: none; }
+
+/* Light Mode (Default) - Avoiding Harsh Blacks */
+:root,
+[data-theme="light"] {
+  /* Primary Colors */
+  --primary: #071f33;                /* Deep Navy Blue */
+  --accent: #C5A572;                 /* Champagne Gold */
+  
+  /* Backgrounds */
+  --background: #FAFAFA;             /* Crisp off-white */
+  --surface: #ffffff;                /* Pure white for cards */
+  
+  /* Text Colors - Avoiding Harsh Blacks */
+  --text: #0f1720;                   /* Very dark blue text (NOT BLACK) */
+  --text-secondary: #55606a;         /* Muted gray */
+  --text-light: #718096;             /* Light gray */
+  
+  /* Supporting Colors */
+  --bronze: #8B7355;                 /* Bronze */
+  --border: #E2E8F0;                 /* Light borders */
+  
+  /* Special Effects */
+  --gold-glow: rgba(197, 165, 114, 0.15); /* Subtle gold glow */
+  --border-gradient: linear-gradient(45deg, var(--accent), var(--bronze));
+
+  /* Status Colors */
+  --success: #4CAF50;
+  --error: #f44336;
+  --success-bg: rgba(76, 175, 80, 0.1);
+  --error-bg: rgba(244, 67, 54, 0.1);
+}
+
+/* Dark Mode - Refined Option 1: Deep Navy & Rich Gold - Avoiding Harsh Blacks */
+[data-theme="dark"] {
+  /* Primary Colors */
+  --primary: #071f33;                /* Brand Navy */
+  --accent: #C8A46B;                 /* Warm Gold */
+  
+  /* Backgrounds */
+  --background: #142639;             /* Deep Navy Background */
+  --surface: #1e3a52;                /* Lighter Navy for Cards */
+  
+  /* Text Colors - Avoiding Harsh Whites */
+  --text: #E8F0FF;                   /* Warm Off-White */
+  --text-secondary: #B8C5D6;         /* Muted Blue-Gray */
+  --text-light: #A0AEC0;             /* Muted cool-gray */
+  
+  /* Supporting Colors */
+  --bronze: #CD7F32;                 /* True bronze metallic */
+  --border: #2D4A66;                 /* Navy Border */
+  
+  /* Special Effects */
+  --gold-glow: rgba(200,164,107,0.14); /* Subtle gold glow */
+  --border-gradient: linear-gradient(45deg, var(--accent), var(--bronze));
+
+  /* Status Colors */
+  --success: #81C784;
+  --error: #E57373;
+  --success-bg: rgba(129, 199, 132, 0.15);
+  --error-bg: rgba(229, 115, 115, 0.15);
+}
+
+/* Enhancement Techniques for Dark Mode */
+
+/* 1. Subtle Gradients */
+[data-theme='dark'] {
+  background: linear-gradient(135deg, var(--background) 0%, #0a1525 100%);
+}
+
+/* Body background gradient */
+body {
+  background: var(--background);
+}
+
+[data-theme='dark'] body {
+  background: linear-gradient(135deg, var(--background) 0%, #0a1525 100%);
+}
+
+/* 2. Glowing Accents */
+[data-theme='dark'] .glow {
+  box-shadow: 0 0 15px var(--gold-glow);
+}
+
+/* 3. Text Shadows for Depth */
+[data-theme='dark'] h1, 
+[data-theme='dark'] h2, 
+[data-theme='dark'] h3 {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* 4. Gradient Borders */
+[data-theme='dark'] .gradient-border {
+  border: 1px solid transparent;
+  background: linear-gradient(var(--surface), var(--surface)) padding-box,
+              var(--border-gradient) border-box;
+}
+
+/* Luxury touches for dark mode */
+[data-theme="dark"] .card {
+  border: 1px solid transparent;
+  background: linear-gradient(var(--surface), var(--surface)) padding-box,
+              linear-gradient(45deg, var(--accent), var(--border)) border-box;
+  box-shadow: 0 0 15px var(--gold-glow);
+}
+
+[data-theme="dark"] h1, 
+[data-theme="dark"] h2, 
+[data-theme="dark"] h3 {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] a:hover, 
+[data-theme="dark"] button:hover {
+  color: var(--accent);
+  text-shadow: 0 0 5px var(--gold-glow);
+}
+
+/* Additional style adjustments for dark theme */
+[data-theme='dark'] header {
+  background: var(--surface);
+  border-bottom-color: var(--border);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+[data-theme='dark'] .logo {
+  color: var(--text);
+}
+[data-theme='dark'] nav a {
+  color: var(--text);
+}
+[data-theme='dark'] nav a:hover {
+  background: rgba(255,255,255,0.1);
+}
+[data-theme='dark'] .btn--outline {
+  color: var(--text);
+  border-color: var(--text);
+}
+[data-theme='dark'] .faq-item, 
+[data-theme='dark'] .faq-question {
+    border-color: var(--border);
+}
+
+/* Light Mode Enhancements */
+[data-theme='light'] {
+  background: var(--background);
+}
+
+[data-theme='light'] header {
+  background: var(--surface);
+  border-bottom-color: var(--border);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+[data-theme='light'] .logo {
+  color: var(--text);
+}
+
+[data-theme='light'] nav a {
+  color: var(--text);
+}
+
+[data-theme='light'] nav a:hover {
+  background: rgba(7,31,51,0.05);
+}
+
+[data-theme='light'] .btn--outline {
+  color: var(--text);
+  border-color: var(--text);
+}
+
+[data-theme='light'] .faq-item, 
+[data-theme='light'] .faq-question {
+    border-color: var(--border);
+}
+
+
+/* Refined Dark Mode: Deep Navy & Rich Gold */
+
+/* Enhancement Techniques for Dark Mode */
+
+/* 1. Subtle Gradients */
+[data-theme='dark'] {
+  background: linear-gradient(135deg, var(--background) 0%, #0a1525 100%);
+}
+
+/* 2. Glowing Accents */
+[data-theme='dark'] .glow,
+[data-theme='dark'] .theme-switcher:hover {
+  box-shadow: 0 0 15px var(--gold-glow);
+}
+
+/* 3. Text Shadows for Depth */
+[data-theme='dark'] h1, 
+[data-theme='dark'] h2, 
+[data-theme='dark'] h3,
+[data-theme='dark'] .logo {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* 4. Gradient Borders */
+[data-theme='dark'] .gradient-border {
+  border: 1px solid transparent;
+  background: linear-gradient(var(--surface), var(--surface)) padding-box,
+              var(--border-gradient) border-box;
+}
+
+/* Header enhancements for dark mode */
+[data-theme='dark'] header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Navigation enhancements */
+[data-theme='dark'] nav a {
+  color: var(--text);
+}
+
+[data-theme='dark'] nav a:hover {
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 5px;
+}
+
+/* Button enhancements */
+[data-theme='dark'] .btn {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--bronze) 100%);
+  color: var(--primary);
+  border: none;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+[data-theme='dark'] .btn {
+  transition: all 0.3s ease-in-out;
+}
+
+[data-theme='dark'] .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+[data-theme='dark'] .btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+[data-theme='dark'] .btn--outline {
+  background: transparent;
+  color: var(--text);
+  border: 2px solid var(--accent);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.1);
+}
+
+[data-theme='dark'] .btn--outline:hover {
+  background: rgba(212, 175, 55, 0.1);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.2);
+}
+
+/* Card enhancements */
+[data-theme='dark'] .card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+[data-theme='dark'] .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+/* Form enhancements */
+[data-theme='dark'] .luxury-form-wrapper {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+[data-theme='dark'] .luxury-input {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+[data-theme='dark'] .luxury-input:focus {
+  border-color: var(--accent);
+  background: rgba(255,255,255,0.1);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+[data-theme='dark'] .luxury-label {
+  color: var(--text);
+}
+
+/* Footer enhancements */
+[data-theme='dark'] .main-footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  color: var(--text);
+}
+
+[data-theme='dark'] .main-footer a {
+  color: var(--text);
+}
+
+[data-theme='dark'] .main-footer a:hover {
+  color: var(--accent);
+}
+
+/* FAQ enhancements */
+[data-theme='dark'] .faq-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+[data-theme='dark'] .faq-question {
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+}
+
+[data-theme='dark'] .faq-answer {
+  color: var(--text-secondary);
+}
+
+/* Accessibility enhancements */
+[data-theme='dark'] a:focus,
+[data-theme='dark'] button:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-scroll {
+  animation: fade-in-up 0.8s ease-in-out forwards;
+}

@@ -1,0 +1,266 @@
+:root {
+  /* Critical Colors - Avoiding Harsh Blacks */
+  --background: #FAFAFA;             /* Soft off-white background */
+  --text: #0f1720;                   /* Very dark blue text (NOT BLACK) */
+  --accent: #C5A572;                 /* Champagne Gold */
+  --card: #ffffff;                   /* Pure white for cards */
+  --muted: #718096;                  /* Light gray */
+  --gold: #8B7355;                   /* Bronze */
+  --border-light: rgba(15, 23, 32, 0.08); /* Subtle dividers with dark blue tint */
+}
+
+/* Dark Mode */
+[data-theme='dark'] {
+  --background: var(--color-bg-primary);
+  --text: var(--color-text-primary);
+  --accent: #C8A46B;                 /* Warm Gold */
+  --card: #1A2535;                   /* Deep blue-gray for cards */
+  --muted: #A0AEC0;                  /* Muted cool-gray */
+  --gold: #CD7F32;                   /* True bronze metallic */
+  --border-light: #2D3748;           /* Dark steel-gray */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Base styles */
+html, body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: var(--text);
+  background-color: var(--background);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: var(--card);
+  border-bottom: 1px solid #eee;
+  padding: 14px 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  height: 70px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.logo .text-gold {
+  color: var(--accent-warm);
+}
+
+nav ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  padding: 8px 10px;
+  color: var(--text);
+}
+
+nav a:hover {
+  background: rgba(197, 165, 114, 0.1);
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all var(--motion-fast) var(--ease-standard);
+}
+
+.mobile-menu:hover {
+  background: rgba(197, 165, 114, 0.05);
+}
+
+.mobile-menu i {
+  font-size: 1.5rem;
+  color: var(--accent);
+  transition: transform var(--motion-fast) var(--ease-standard), rotate var(--motion-fast) var(--ease-standard);
+}
+
+.mobile-menu.open i {
+  transform: rotate(90deg);
+}
+
+.hero {
+  padding: 120px 0 80px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--bg) 100%),
+              url('../images/placeholders/hero-background.svg');
+  color: var(--card);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, var(--card) 0%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  animation: bounce 2s infinite;
+}
+
+.hero-scroll-indicator span {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.7;
+}
+
+.hero-scroll-indicator i {
+  font-size: 24px;
+  color: var(--gold);
+}
+
+h1 {
+  font-size: 36px;
+  color: var(--accent);
+  margin: 20px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--accent);
+  color: var(--background-white);
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 5px;
+  transition: all var(--motion-fast) var(--ease-standard);
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: var(--accent-warm); /* Slightly warmer shade for hover */
+  transform: translateY(-2px);
+}
+
+.btn--outline {
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+}
+
+.btn--outline:hover {
+  background: rgba(197, 165, 114, 0.1);
+  border-color: var(--accent-warm);
+  color: var(--accent-warm);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Ensure all interactive elements have visible focus states */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 1440px) {}
+@media (max-width: 1200px) {}
+@media (max-width: 1024px) {}
+@media (max-width: 768px) {
+  .mobile-menu { display: block; }
+  .nav-links { display: none; position: fixed; top: 70px; right: 0; width: 250px; background: var(--card); box-shadow: -5px 0 15px rgba(0,0,0,0.1); border-radius: 10px 0 0 10px; z-index: 100; padding: 20px; flex-direction: column; }
+  .nav-links.active { display: flex; }
+  .nav-links li { margin-bottom: 10px; width: 100%; }
+  .nav-links a { display: block; padding: 12px; border-radius: 5px; text-align: left; }
+  .nav-links a:hover { background: rgba(197, 165, 114, 0.05); }
+  .nav { flex-direction: row; justify-content: space-between; align-items: center; }
+  .hero-content h1 { font-size: 2.5rem; }
+  .hero-content p { font-size: 1rem; }
+}
+@media (max-width: 480px) {}

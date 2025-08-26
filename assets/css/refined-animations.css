@@ -1,0 +1,59 @@
+/* Refined scroll-triggered animations for main content sections */
+
+/* Base animation class for all scroll-triggered elements */
+.animate-on-scroll {
+  opacity: var(--motion-opacity-hidden);
+  transform: translateY(var(--motion-translate-large));
+  transition: opacity var(--motion-slow) var(--ease-decelerate), transform var(--motion-slow) var(--ease-decelerate);
+}
+
+/* Animated state */
+.animate-on-scroll.animate {
+  opacity: var(--motion-opacity-visible);
+  transform: translateY(0);
+}
+
+/* Staggering delays for child elements (50-100ms) */
+/* These will be primarily controlled by JavaScript for more precise timing */
+
+/* Section-level animations */
+section:not(.hero):not(.main-footer) > .container > .section-title.animate-on-scroll,
+section:not(.hero):not(.main-footer) > .section-title.animate-on-scroll {
+  transition-delay: 0s;
+}
+
+section:not(.hero):not(.main-footer) > .container > .cards .card.animate-on-scroll,
+section:not(.hero):not(.main-footer) > .cards .card.animate-on-scroll,
+section:not(.hero):not(.main-footer) > .container > .how-it-works-grid .how-it-works-card.animate-on-scroll,
+section:not(.hero):not(.main-footer) > .how-it-works-grid .how-it-works-card.animate-on-scroll,
+section:not(.hero):not(.main-footer) > .container > .performance-grid .performance-card.animate-on-scroll,
+section:not(.hero):not(.main-footer) > .performance-grid .performance-card.animate-on-scroll,
+section:not(.hero):not(.main-footer) > .container > .funfacts-grid .funfact-item.animate-on-scroll,
+section:not(.hero):not(.main-footer) > .funfacts-grid .funfact-item.animate-on-scroll,
+section:not(.hero):not(.main-footer) > .container > .destinations-grid .destination-card.animate-on-scroll,
+section:not(.hero):not(.main-footer) > .destinations-grid .destination-card.animate-on-scroll,
+section:not(.hero):not(.main-footer) > .container > .testimonials .testimonial.animate-on-scroll,
+section:not(.hero):not(.main-footer) > .testimonials .testimonial.animate-on-scroll {
+  transition-delay: 0.1s;
+}
+
+/* Additional staggered delays for elements within complex sections */
+.destination-content .destination-header.animate-on-scroll {
+  transition-delay: 0.05s;
+}
+
+.destination-content .destination-description.animate-on-scroll {
+  transition-delay: 0.1s;
+}
+
+.destination-content .destination-features.animate-on-scroll {
+  transition-delay: 0.15s;
+}
+
+.destination-content .exclusive-perks.animate-on-scroll {
+  transition-delay: 0.2s;
+}
+
+.destination-content .destination-actions.animate-on-scroll {
+  transition-delay: 0.25s;
+}
